@@ -22,14 +22,7 @@ class Settings(BaseSettings):
 
     MISTRAL_API_KEY: str | None = None
     MISTRAL_MODEL: str = "mistral-large-latest"
-    OPENAI_API_KEY: str | None = None
-    OPENAI_MODEL: str = "gpt-4o"
-    GEMINI_API_KEY: str | None = None
-    GROQ_API_KEY: str | None = None
-    GROQ_MODEL: str = "llama-3.3-70b-versatile"
-    ANTHROPIC_API_KEY: str | None = None
-    ANTHROPIC_MODEL: str = "claude-3-5-sonnet-latest"
-    LLM_FALLBACK_ORDER: list[str] = ["mistral", "openai", "groq", "anthropic"]
+    LLM_FALLBACK_ORDER: list[str] = ["mistral"]
     LANGSMITH_TRACING: bool = False
     LANGSMITH_API_KEY: str | None = None
     LANGSMITH_PROJECT: str = "enterprise-rag-platform"
