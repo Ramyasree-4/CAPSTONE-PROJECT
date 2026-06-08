@@ -1,0 +1,17 @@
+.env
+*.pyc
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+.next/
+.next-build/
+.next-final/
+out/
+dist/
+build/
+coverage/
+backend/uploads/
+backend/chroma/
+.DS_Store
