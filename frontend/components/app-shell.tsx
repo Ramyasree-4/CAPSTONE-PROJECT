@@ -34,17 +34,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <Sidebar pathname={pathname} />
       </aside>
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-black/30 lg:hidden">
-          <aside className="h-full w-80 max-w-[86vw] overflow-y-auto bg-white px-4 py-5 shadow-xl">
+        <div className="fixed inset-0 z-40 bg-black/30 lg:hidden" onClick={() => setMenuOpen(false)}>
+          <aside className="h-full w-80 max-w-[86vw] overflow-y-auto bg-white px-4 py-5 shadow-xl" onClick={(event) => event.stopPropagation()}>
             <div className="mb-4 flex items-center justify-between">
               <span className="text-sm font-semibold">Navigation</span>
               <button className="grid h-9 w-9 place-items-center rounded border border-zinc-200" onClick={() => setMenuOpen(false)} title="Close menu">
                 <X size={17} />
               </button>
             </div>
-            <div onClick={() => setMenuOpen(false)}>
-              <Sidebar pathname={pathname} />
-            </div>
+            <Sidebar pathname={pathname} />
           </aside>
         </div>
       )}
