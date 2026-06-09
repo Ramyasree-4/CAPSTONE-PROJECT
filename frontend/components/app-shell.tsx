@@ -30,7 +30,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <main className="min-h-screen bg-mist text-ink">
-      <aside className="fixed left-0 top-0 hidden h-full w-72 overflow-y-auto border-r border-zinc-200 bg-white px-4 py-5 lg:block">
+      <aside className="fixed left-0 top-0 z-30 hidden h-full w-72 overflow-y-auto border-r border-zinc-200 bg-white px-4 py-5 lg:block">
         <Sidebar pathname={pathname} />
       </aside>
       {menuOpen && (
